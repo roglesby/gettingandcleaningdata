@@ -3,7 +3,7 @@ gettingandcleaningdata
 
 **Getting and Cleaning Data Course Project**
 
-*25 October 2014 - Coursera*
+*25 October 2014 - Coursera Project*
 
 The dataset includes the following files:
 
