@@ -1,17 +1,17 @@
 gettingandcleaningdata
 ======================
 
-Getting and Cleaning Data Course Project
+**Getting and Cleaning Data Course Project**
 
-25 October 2014 - Coursera 
+*25 October 2014 - Coursera*
 
 The dataset includes the following files:
 
-README.md      : This file
+ *  README.md      : This file
 
-run_analysis.R : An R program to clean and tidy up the training and test data
+ *  run_analysis.R : An R program to clean and tidy up the training and test data
 
-results.txt    : The tidy dataset output from my run_analysis.R
+ *  results.txt    : The tidy dataset output from my run_analysis.R
 
-codebook.md    : Description of the dataset found in results.txt
+ *  codebook.md    : Description of the dataset found in results.txt
 
