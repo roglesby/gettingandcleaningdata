@@ -13,7 +13,7 @@ The dataset includes the following files:
 
  *  results.txt    : The tidy dataset output from my run_analysis.R
 
- *  codebook.md    : Description of the dataset found in results.txt
+ *  codebook.md    : Description of the analysis
 
 **Acknowledgment:**
 The data originates in an experiment using Samsung phones.
@@ -27,4 +27,4 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
-Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.  
