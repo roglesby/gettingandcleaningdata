@@ -10,27 +10,26 @@
 #    Subjects
 #      subject_test.txt
 #      subject_train.txt
-#    Features
-#      Features.txt
-#
+#    features.txt
+#    activity_lables
 #  Read Features data and decide which features are of interest - "mean()" or "std()"
-Features <- read.table("./data/Features.txt", header=FALSE)
+Features <- read.table("./data/features.txt", header=FALSE)
 sub <- grep(("mean\\(\\)|std\\(\\)"), Features$V2)
 #
 #  Read X data and combine test and train, retaining only features of interest   
-X_test  <- read.table("./data/X_test.txt", header=FALSE)
-X_train <- read.table("./data/X_train.txt", header=FALSE)
+X_test  <- read.table("./data/test/X_test.txt", header=FALSE)
+X_train <- read.table("./data/train/X_train.txt", header=FALSE)
 X <- rbind(X_test[, sub], X_train[,sub])
 #
 #  Read Y data and combine test and train, adding in a row number to retain original order
-Y_test  <- read.table("./data/Y_test.txt", header=FALSE) 
-Y_train <- read.table("./data/Y_train.txt", header=FALSE)
+Y_test  <- read.table("./data/test/Y_test.txt", header=FALSE) 
+Y_train <- read.table("./data/train/Y_train.txt", header=FALSE)
 Y <- rbind(Y_test, Y_train)
 Y <- cbind(row(Y), Y)
 #
 #  Read subject data and combine test and train
-subject_train <-  read.table("./data/subject_train.txt", header=FALSE)
-subject_test  <-  read.table("./data/subject_test.txt", header=FALSE)
+subject_test  <-  read.table("./data/test/subject_test.txt", header=FALSE)
+subject_train <-  read.table("./data/train/subject_train.txt", header=FALSE)
 subjects <- rbind(subject_test, subject_train)
 #
 #  read activity labels
@@ -58,5 +57,5 @@ names(X)[2] <- "Subject"
 #
 #  Find the average of the variables in X, by activity and subject 
 results <- aggregate(X[, c(-1, -2)], X[, c("Subject", "Activity")], mean)
-write.table(results, "./results.txt", row.names=FALSE)
-#
+write.table(results, "./data/results.txt", row.names=FALSE)
+#  
